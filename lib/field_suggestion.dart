@@ -326,7 +326,7 @@ class _FieldSuggestionState<T> extends State<FieldSuggestion<T>>
     final input = widget.textController.text;
 
     // Should close box if input is empty.
-    if (input.isEmpty) return closeBox();
+    // if (input.isEmpty) return closeBox();
 
     matchers = widget.suggestions.where((i) {
       return widget.search(i, input.toString());
