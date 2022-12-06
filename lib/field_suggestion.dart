@@ -331,7 +331,10 @@ class _FieldSuggestionState<T> extends State<FieldSuggestion<T>>
 
   // A set-state wrapper to avoid [setState after dispose] error.
   void _mountedSetState(void Function() fn) {
-    // if (this.mounted) setState(fn);
+    try {
+      if (this.mounted) setState(fn);
+    } catch (e) {
+    }
   }
 
   // A external callback function used to refresh content-state of box.
