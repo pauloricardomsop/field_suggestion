@@ -285,12 +285,6 @@ class _FieldSuggestionState<T> extends State<FieldSuggestion<T>>
   late AnimationController _animationController;
 
   @override
-  void dispose() {
-    widget.textController.dispose();
-    super.dispose();
-  }
-
-  @override
   void initState() {
     super.initState();
     widget.textController.addListener(_textListener);
